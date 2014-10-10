@@ -36,7 +36,7 @@ Installation/configuration
 Install PostgreSQL database server
 ----------------------------------
 
-Go to [http://postgresapp.com/ http://postgresapp.com/] and install the app on your machine.
+Go to [http://postgresapp.com/](http://postgresapp.com/) and install the app on your machine.
 
 Start it up.  You can configure Postgres to start automatically, or you can start it whenever you need it.
 
@@ -111,7 +111,7 @@ You need to set the following variables to the appropriate values:
     OAUTH_TOKEN_SECRET = 'secret'
     TRACK = 'water'
 
-TRACK is a comma separated list of strings.  The track string is documented in the Twitter streaming API, [ttps://dev.twitter.com/streaming/overview/request-parameters#track https://dev.twitter.com/streaming/overview/request-parameters#track]
+TRACK is a comma separated list of strings.  The track string is documented in the Twitter streaming API, [https://dev.twitter.com/streaming/overview/request-parameters#track](https://dev.twitter.com/streaming/overview/request-parameters#track)
 
 Run the load-stream.py script
 -----------------------------
@@ -175,10 +175,10 @@ Consider the following improvements:
 Learn more about SQLAlchemy
 ---------------------------
 
-[http://docs.sqlalchemy.org/en/rel_0_9/ http://docs.sqlalchemy.org/en/rel_0_9/]
+[http://docs.sqlalchemy.org/en/rel_0_9/](http://docs.sqlalchemy.org/en/rel_0_9/)
 
 Learn more about SQL
 --------------------
 
-[http://www.postgresql.org/docs/9.3/static/index.html http://www.postgresql.org/docs/9.3/static/index.html]
+[http://www.postgresql.org/docs/9.3/static/index.html](http://www.postgresql.org/docs/9.3/static/index.html)
 
