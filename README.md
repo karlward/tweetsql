@@ -33,13 +33,15 @@ The PostgreSQL database is used in this example because of its superior handling
 Installation/configuration
 ==========================
 
-1.  Install PostgreSQL database server
+Install PostgreSQL database server
+----------------------------------
 
 Go to http://postgresapp.com/ and install the app on your machine.
 
 Start it up.  You can configure Postgres to start automatically, or you can start it whenever you need it.
 
-2.  Optional pro step: create a Python virtualenv
+Optional pro step: create a Python virtualenv
+---------------------------------------------
 
 If you have virtualenv, then in Terminal, create a new virtual environment for this program: 
 
@@ -50,7 +52,8 @@ If you have virtualenv, then in Terminal, create a new virtual environment for t
 
 Note: if you set up a virtualenv, remember to use it throughout this example. 
 
-3.  Install dependencies with pip
+Install dependencies with pip
+-----------------------------
 
 In Terminal: 
 
@@ -59,7 +62,8 @@ In Terminal:
 
 Note: it's necessary to temporarily add the Postgres directory to your PATH environment variable, just so psycopg2 gets built properly by pip.  You can add it to your PATH permanently if you like, but you don't need to. 
 
-4.  Create a database
+Create a database
+-----------------
 
 Once you have Postgres running, you should see an elephant in the Finder bar at the top of the screen.  Click on the elephant and choose "Open psql".   You'll see a new Terminal window, but this one isn't running Unix.  Instead it is psql, the Postgres SQL command interface.  You need to run the following commands: 
 
@@ -68,7 +72,8 @@ Once you have Postgres running, you should see an elephant in the Finder bar at 
 
 That's it for psql, unless you want to muck around with the SQL directly.  
 
-5.  Get the tweetsql code
+Get the tweetsql code
+---------------------
 
 If you don't have it already, get the tweetsql code from Git: 
 
@@ -76,7 +81,8 @@ If you don't have it already, get the tweetsql code from Git:
     cd ~/Code
     git clone https://github.com/karlward/tweetsql.git
 
-6.  Setup your database schema
+Setup your database schema
+--------------------------
 
 Before you can use the database you created, you have to tell Postgres what kind of data you want to store in it.  Luckily, SQLAlchemy does most of the work for you, you just have to run one Python function.  In Terminal: 
 
@@ -90,7 +96,8 @@ Exit from the python interpreter.
 
 That should have setup your database schema, which means you have an empty database that is ready to store data in the right format.  
 
-7.  Add your Twitter keys and search string(s)
+Add your Twitter keys and search string(s)
+------------------------------------------
 
 You have to modify one file to use this code.  That file is: 
 
@@ -106,7 +113,8 @@ You need to set the following variables to the appropriate values:
 
 TRACK is a comma separated list of strings.  The track string is documented in the Twitter streaming API, https://dev.twitter.com/streaming/overview/request-parameters#track
 
-8.  Run the load-stream.py script
+Run the load-stream.py script
+-----------------------------
 
     cd ~/Code/tweetsql
     python load-stream.py
@@ -115,7 +123,8 @@ This script accesses the streaming API, downloading every tweet that matches the
 
 It's nice that you can leave this script running for a while (assuming you don't hit your rate limit), and you can restart it whenever you want.  The data will just keep going into the database, where you can manipulate it and query it in different ways later.  
 
-9.  Run the write-gexf.py script
+Run the write-gexf.py script
+----------------------------
 
     cd ~/Code/tweetsql
     python write-gexf.py
@@ -150,7 +159,8 @@ And access the tweets you have captured for each user:
 
     u.tweets
 
-10.  Poke around in the tweetsql model to learn how to roll your own
+Poke around in the tweetsql model to learn how to roll your own
+---------------------------------------------------------------
 
     cd ~/Code/tweetsql/tweetsql
     open model.py
@@ -162,11 +172,13 @@ Consider the following improvements:
 - adapting this technique for Instagram or other APIs
 - using this technique in your Twitter searches (rather than just the streaming API)
 
-11.  Learn more about SQLAlchemy
+Learn more about SQLAlchemy
+---------------------------
 
     http://docs.sqlalchemy.org/en/rel_0_9/
 
-12.  Learn more about SQL
+Learn more about SQL
+--------------------
 
     http://www.postgresql.org/docs/9.3/static/index.html
 
