@@ -19,7 +19,7 @@ class Tweet(Base):
     data = Column(Text, nullable=False)
 
     def __repr__(self):
-        return '<Tweet {}>'.format(tid)
+        return '<Tweet {}>'.format(self.tid)
 
 class User(Base):
     __tablename__ = 'user'
@@ -28,7 +28,7 @@ class User(Base):
     uid = Column(String(50), nullable=False)
 
     def __repr__(self):
-        return '<User {}>'.format(uid)
+        return '<User {}>'.format(self.uid)
 
 class Word(Base):
     __tablename__ = 'word'
@@ -36,4 +36,4 @@ class Word(Base):
     word = Column(String(100), nullable=False)
 
     def __repr__(self):
-        return '<User {}>'.format(uid)
+        return '<User {}>'.format(self.uid)
