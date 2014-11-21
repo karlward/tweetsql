@@ -5,11 +5,11 @@ from tweetsql.database import Base
 
 hashtag_tweet = Table('hashtag_tweet', Base.metadata,
     Column('hashtag_id', Integer, ForeignKey('hashtag.id'), nullable=False),
-    Column('tweet_id', Integer, ForeignKey('tweet.id'), nullable=False)
+    Column('tweet_id', Integer, ForeignKey('tweet.id'), nullable=False))
 
 hashtag_user = Table('hashtag_user', Base.metadata,
     Column('hashtag_id', Integer, ForeignKey('hashtag.id'), nullable=False),
-    Column('user_id', Integer, ForeignKey('user.id'), nullable=False)
+    Column('user_id', Integer, ForeignKey('user.id'), nullable=False))
 
 tweet_word = Table('tweet_word', Base.metadata,
     Column('tweet_id', Integer, ForeignKey('tweet.id'), nullable=False),
