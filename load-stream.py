@@ -3,7 +3,7 @@
 import json
 import twitter
 from tweetsql.database import Base, db_session, engine
-from tweetsql.model import Tweet, User, Word
+from tweetsql.model import Hashtag, Tweet, User, Word
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm.exc import MultipleResultsFound, NoResultFound
 
