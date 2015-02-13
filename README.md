@@ -57,7 +57,7 @@ Install dependencies with pip
 
 In Terminal: 
 
-    export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin/
+    export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
     pip install psycopg2 SQLAlchemy networkx twitter
 
 Note: it's necessary to temporarily add the Postgres directory to your PATH environment variable, just so psycopg2 gets built properly by pip.  You can add it to your PATH permanently if you like, but you don't need to. 
@@ -91,8 +91,9 @@ Before you can use the database you created, you have to tell Postgres what kind
     import tweetsql.database
     import tweetsql.model
     tweetsql.database.init_db()
+    exit()
 
-Exit from the python interpreter.  
+The last command exits from the python interpreter, bringing you back to the shell prompt.
 
 That should have setup your database schema, which means you have an empty database that is ready to store data in the right format.  
 
